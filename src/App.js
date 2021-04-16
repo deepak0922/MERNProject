@@ -9,10 +9,15 @@ import NewPlace from './places/pages/NewPlace';
 const App = () => {
   return (
     <Router>
+      <Switch>
       <Route path="/" exact>
         <User />
       </Route>
+      <Route path="/places/new" exact>
+        <NewPlace />
+      </Route>
       <Redirect to="/" />
+      </Switch>
     </Router>
   );
 };
